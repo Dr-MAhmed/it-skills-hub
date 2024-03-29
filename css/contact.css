@@ -55,7 +55,26 @@
 }
 
 .contact__socials a:hover{
-    background: transparent;
+    /* background: transparent; */
+    /* background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); */
+
+}
+
+.insta:hover{
+    background: linear-gradient(to right, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+
+}
+.linkedinn:hover{
+    background-image: linear-gradient(to bottom right, #0077B5, #0A66C2);
+
+}
+.fbb:hover{
+    background-image: linear-gradient(to bottom right, #074d72, #0A66C2);
+    
+}
+.twit:hover{
+    background-image: linear-gradient(to bottom right, #1DA1F2, #c7bdbd);
+
 }
 
 
