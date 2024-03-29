@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.course__catalog{
+    font-size: 5rem;
+    font-family: "Montagu Slab", serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .course__catalog{
+        font-size: 2rem;
+    }
+}
