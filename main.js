@@ -4,9 +4,7 @@ window.addEventListener("scroll", ()=>{
 });
 
 // Show/hide FAQs Answer
-
 const faqs = document.querySelectorAll('.faq');
-
 faqs.forEach(faq => {
     faq.addEventListener('click', () => {
         faq.classList.toggle('open');
@@ -41,19 +39,61 @@ closeBtn.addEventListener('click', () => {
     menuBtn.style.display = "inline-block";
 });
 
+
+// Logic to Create a counter animation
+function startCounters() {
+    const coursesCounter = document.getElementById('courses-counter');
+    const studentsCounter = document.getElementById('students-counter');
+    const successCounter = document.getElementById('success-counter');
+    
+    let coursesCount = 0;
+    let studentsCount = 0;
+    let successCount = 0;
+    
+    let incrementCourses = 0.5; // Adjust the increment values as needed
+    let incrementStudents = 50;
+    let incrementSuccess = 20;
+    
+    const interval = setInterval(() => {
+      if (coursesCount >= 30 && studentsCount >= 1500 && successCount >= 600) {
+        clearInterval(interval);
+      } else {
+        coursesCount += incrementCourses;
+        studentsCount += incrementStudents;
+        successCount += incrementSuccess;
+        
+        coursesCounter.textContent = coursesCount > 30 ? '30+' : Math.floor(coursesCount);
+        studentsCounter.textContent = studentsCount > 1500 ? '1,500+' : Math.floor(studentsCount);
+        successCounter.textContent = successCount > 600 ? '600+' : Math.floor(successCount);
+      }
+    }, 50); // Adjust interval as needed for smoother animation
+    
+    setTimeout(() => {
+      clearInterval(interval);
+      coursesCounter.textContent = '30+';
+      studentsCounter.textContent = '1,500+';
+      successCounter.textContent = '600+';
+    }, 2000); // Adjust the duration for the slow to fast transition
+  }
+  
+  // Start counters when the page loads
+  window.onload = startCounters;
+  
+  
+
 // logic to create a testimonial crousel
- // var swiper = new Swiper(".mySwiper", {
-        //     slidesPerView: 1,
-        //     spaceBetween: 30,
-        //     pagination: {
-        //         el: ".swiper-pagination",
-        //         clickable: true,
-        //     },
-        //     //When window width is >= 600px
-        //     breakpoints: {
-        //         600: {
-        //             slidesPerView: 3,
-        //             spaceBetween: 40,
-        //         },
-        //     }
-        // });
+//  var swiper = new Swiper(".mySwiper", {
+//             slidesPerView: 1,
+//             spaceBetween: 30,
+//             pagination: {
+//                 el: ".swiper-pagination",
+//                 clickable: true,
+//             },
+//             //When window width is >= 600px
+//             breakpoints: {
+//                 600: {
+//                     slidesPerView: 3,
+//                     spaceBetween: 40,
+//                 },
+//             }
+//         });
