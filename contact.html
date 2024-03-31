@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/layers.png" type="image/x-icon">
     <title>Contact Us | IT Skills Hub</title>
+     <!-- Include Toastify CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/contact.css">
 
@@ -79,13 +81,13 @@
             </aside>
 
 
-            <form action="https://formspree.io/f/mbjnzyya" method="POST" class="contact__form">
+            <form action="https://formspree.io/f/mleqppnv" method="POST" class="contact__form" id="contactForm">
                 <div class="form__name">
-                    <input type="text" name="First Name" placeholder="First Name" required>
-                    <input type="text" name="Last Name" placeholder="Last Name" required>
+                    <input type="text" name="First Name" id="firstName" placeholder="First Name" required>
+                    <input type="text" name="Last Name" id="lastName" placeholder="Last Name" required>
                 </div>
-                <input type="email" name="Email Address" placeholder="Your Email Address" required>
-                <textarea name="Message" rows="7" placeholder="Message" required></textarea>
+                <input type="email" name="Email Address" id="email" placeholder="Your Email Address" required>
+                <textarea name="Message" id="message" rows="7" placeholder="Message" required></textarea>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
@@ -144,6 +146,8 @@
     <script src="https://kit.fontawesome.com/8d54a40419.js" crossorigin="anonymous"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
+     <!-- Include Toastify JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./main.js"></script>
 </body>
 
